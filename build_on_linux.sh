@@ -80,7 +80,7 @@ fi
 git submodule update --init
 mkdir build
 cd build
-cmake "${BUILD_OPS}" ../
+cmake "${BUILD_OPS}" -DBUILD_TESTS=OFF -DUSE_RPATH=OFF ../
 exit_on_error $?
 
 make
